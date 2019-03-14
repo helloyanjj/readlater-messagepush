@@ -1,7 +1,14 @@
 server:
-    port: 6667
+    port: 2223
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:1111/eureka/
 
 spring:
+    application:
+        name: rl-messagepush
     datasource:
         url: jdbc:mysql://localhost:3306/readlater
         username: root

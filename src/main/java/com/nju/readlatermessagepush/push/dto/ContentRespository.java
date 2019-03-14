@@ -17,6 +17,10 @@ public interface ContentRespository extends JpaRepository<ShareContent, Long> {
 
     List<ShareContent> findShareContentsByUserId(String userId);
 
+//    @Query("SELECT top 1 * FROM ShareContent sc " +
+//            "WHERE sc.userId=:userId AND sc.haveRead=:haveRead")
+//    ShareContent findShareContentByUserIdAndId(String userId,String haveRead);
+
     @Modifying(clearAutomatically = true)
     @Query("UPDATE ShareContent sc SET sc.haveRead=:haveRead " +
             "WHERE sc.id=:id")
