@@ -19,8 +19,8 @@ public class PushManagement {
     @Inject
     private ContentRespository contentRespository;
 
-    public String pushMessage() {
-        appPush.push();
+    public String pushMessage(String userId) {
+        appPush.push(userId);
         return ReturnInfo.success;
     }
 

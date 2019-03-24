@@ -29,8 +29,8 @@ public class AppPush {
     private static String masterSecret = "XiAduXb78P6ozlQROPo2e1";
     private static String url = "http://sdk.open.api.igexin.com/apiex.htm";
 
-    public void push() {
-//        ShareContent shareContent = pushManagement.getContent("yanjunjie");
+    public void push(String userId) {
+//        ShareContent shareContent = pushManagement.getContent(userId);
         try {
             IGtPush push = new IGtPush(url, appKey, masterSecret);
 
@@ -46,6 +46,7 @@ public class AppPush {
 
             Matcher matcher = Patterns.WEB_URL.matcher("既然武术套路不能用于实战，那么武术套路的存在意义是什么？ - 可以直接打我的回答 - 知乎\n" +
                     "https://www.zhihu.com/question/305173373/answer/555789791");
+//            Matcher matcher = Patterns.WEB_URL.matcher(shareContent.getContent());
             if (matcher.find()) {
                 System.out.println(matcher.group());
                 String linkUrl = matcher.group();
