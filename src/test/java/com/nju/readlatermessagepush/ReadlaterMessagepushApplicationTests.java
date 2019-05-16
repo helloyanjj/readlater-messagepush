@@ -9,8 +9,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class ReadlaterMessagepushApplicationTests {
 
+//    @Test
+//    public void contextLoads() {
+//    }
+
     @Test
-    public void contextLoads() {
+    public void testPushMessage() {
+        System.out.println("hello");
     }
 
 }

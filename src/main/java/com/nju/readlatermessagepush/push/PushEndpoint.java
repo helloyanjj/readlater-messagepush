@@ -21,7 +21,7 @@ public class PushEndpoint {
     private PushManagement pushManagement;
 
     @POST
-    @RequestMapping(value = "sendMessagePush",method = RequestMethod.POST)
+    @RequestMapping(value = "sendMessagePush", method = RequestMethod.POST)
     public String changeReadStatus() {
 //        pushManagement.pushMessage(user.getUserId());
         pushManagement.pushMessage("yanjunjie");

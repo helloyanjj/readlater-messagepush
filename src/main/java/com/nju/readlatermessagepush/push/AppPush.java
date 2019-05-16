@@ -9,7 +9,6 @@ import com.gexin.rp.sdk.base.impl.AppMessage;
 import com.gexin.rp.sdk.http.IGtPush;
 import com.gexin.rp.sdk.template.LinkTemplate;
 import com.nju.readlatermessagepush.push.data.Patterns;
-import com.nju.readlatermessagepush.push.data.ShareContent;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
@@ -52,7 +51,6 @@ public class AppPush {
                 String linkUrl = matcher.group();
                 template.setUrl(linkUrl);
             }
-
 
 
             List<String> appIds = new ArrayList<String>();

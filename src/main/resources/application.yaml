@@ -1,20 +1,20 @@
 server:
-    port: 2223
+  port: 2223
 
 eureka:
-    client:
-        service-url:
-            defaultZone: http://localhost:1111/eureka/
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
 
 spring:
-    application:
-        name: rl-messagepush
-    datasource:
-        url: jdbc:mysql://localhost:3306/readlater
-        username: root
-        password: 88888888
-        driver-class-name: com.mysql.cj.jdbc.Driver
-    jpa:
-        show-sql: true
-        hibernate:
-            ddl-auto: update
+  application:
+    name: rl-messagepush
+  datasource:
+    url: jdbc:mysql://localhost:3306/readlater?serverTimezone=GMT%2B8
+    username: root
+    password: 88888888
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
